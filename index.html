@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,334 +8,473 @@
 <title>Vishwa Publication</title>
 
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-html,body{
-    width:100%;
-    min-height:100%;
+html,
+body {
+    width: 100%;
+    min-height: 100%;
 }
 
-body{
-    background:#020d13;
-    color:#fff;
-    display:flex;
-    justify-content:center;
-    padding:0;
+body {
+    background: #020d13;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    padding: 0;
 }
 
-.main{
-    width:100%;
-    max-width:700px;
-    min-height:100vh;
-    padding:15px 16px 25px;
+/* =========================
+   MOBILE MAIN CONTAINER
+========================= */
+
+.main {
+    width: 100%;
+    max-width: 390px;
+    min-height: 100vh;
+
+    padding: 10px;
+
     background:
-    radial-gradient(circle at 50% 15%,rgba(212,164,35,.08),transparent 25%),
-    linear-gradient(180deg,#071218,#020d13);
-    border:2px solid #c99b27;
-    border-radius:38px 38px 28px 28px;
+        radial-gradient(
+            circle at 50% 15%,
+            rgba(212, 164, 35, .08),
+            transparent 25%
+        ),
+        linear-gradient(
+            180deg,
+            #071218,
+            #020d13
+        );
+
+    border: 2px solid #c99b27;
+    border-radius: 25px;
+
     box-shadow:
-        0 0 0 5px #071218,
-        0 0 0 7px #a77c17;
+        0 0 0 4px #071218,
+        0 0 0 6px #a77c17;
 }
 
-/* Inner Border */
-.inner{
-    min-height:calc(100vh - 40px);
-    border:1px solid #a98422;
-    border-radius:30px;
-    padding:12px 27px 25px;
+/* =========================
+   INNER BORDER
+========================= */
+
+.inner {
+    min-height: calc(100vh - 20px);
+
+    border: 1px solid #a98422;
+    border-radius: 20px;
+
+    padding: 12px 16px 20px;
 }
 
-/* Logo */
-.logo-box{
-    width:120px;
-    height:120px;
-    margin:0 auto 18px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
+/* =========================
+   LOGO
+========================= */
+
+.logo-box {
+    width: 90px;
+    height: 90px;
+
+    margin: 0 auto 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.logo-box img{
-    width:115px;
-    height:115px;
-    object-fit:contain;
-    border-radius:50%;
+.logo-box img {
+    width: 85px;
+    height: 85px;
+
+    object-fit: contain;
+    border-radius: 50%;
 }
 
-/* Heading */
-h1{
-    text-align:center;
-    color:#f5d36b;
-    font-size:32px;
-    font-weight:800;
-    letter-spacing:1px;
-    line-height:1.15;
-    text-shadow:0 0 12px rgba(245,211,107,.15);
+/* =========================
+   TITLE
+========================= */
+
+h1 {
+    text-align: center;
+
+    color: #f5d36b;
+
+    font-size: 25px;
+    font-weight: 800;
+
+    letter-spacing: .7px;
+    line-height: 1.15;
+
+    text-shadow:
+        0 0 12px rgba(245,211,107,.15);
 }
 
-.subtitle{
-    text-align:center;
-    font-size:20px;
-    margin-top:10px;
-    color:#f2f2f2;
+.subtitle {
+    text-align: center;
+
+    font-size: 16px;
+
+    margin-top: 7px;
+
+    color: #f2f2f2;
 }
 
-/* Managed By */
-.managed{
-    margin:17px auto 27px;
-    text-align:center;
-    color:#aaa;
-    font-size:13px;
-    position:relative;
+/* =========================
+   MANAGED BY
+========================= */
+
+.managed {
+    margin: 13px auto 16px;
+
+    text-align: center;
+
+    color: #aaa;
+
+    font-size: 11px;
+
+    position: relative;
 }
 
 .managed:before,
-.managed:after{
-    content:"";
-    display:inline-block;
-    width:60px;
-    height:2px;
-    background:#c79b28;
-    vertical-align:middle;
-    margin:0 10px;
+.managed:after {
+    content: "";
+
+    display: inline-block;
+
+    width: 35px;
+    height: 1px;
+
+    background: #c79b28;
+
+    vertical-align: middle;
+
+    margin: 0 6px;
 }
 
-.managed strong{
-    display:block;
-    color:#e5c258;
-    letter-spacing:1.5px;
-    margin-top:8px;
-    font-size:14px;
+.managed strong {
+    display: block;
+
+    color: #e5c258;
+
+    letter-spacing: 1px;
+
+    margin-top: 5px;
+
+    font-size: 12px;
 }
 
-/* Feature */
-.feature{
-    display:flex;
-    align-items:center;
-    gap:23px;
-    padding:18px 0;
-    border-bottom:1px solid rgba(255,255,255,.12);
+/* =========================
+   FEATURES
+========================= */
+
+.feature {
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 14px 0;
+
+    border-bottom:
+        1px solid rgba(255,255,255,.12);
 }
 
-.icon{
-    min-width:70px;
-    width:70px;
-    height:70px;
-    border:1px solid #b78d22;
-    border-radius:50%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:34px;
-    background:rgba(7,18,24,.8);
-    box-shadow:0 0 12px rgba(201,155,39,.08);
-}
+.icon {
+    min-width: 55px;
 
-.feature h2{
-    font-size:22px;
-    line-height:1.2;
-    color:#f1f1f1;
-    margin-bottom:7px;
-}
+    width: 55px;
+    height: 55px;
 
-.feature p{
-    color:#9fa7aa;
-    font-size:16px;
-    line-height:1.35;
-}
+    border: 1px solid #b78d22;
 
-/* Community */
-.community{
-    text-align:center;
-    font-size:18px;
-    line-height:1.35;
-    color:#e7e7e7;
-    margin:17px 0 19px;
-}
+    border-radius: 50%;
 
-.community span{
-    color:#f5d36b;
-    font-size:23px;
-    margin:0 10px;
-}
+    display: flex;
 
-/* Telegram Button */
-.join-btn{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:18px;
-    width:100%;
-    min-height:82px;
-    border-radius:45px;
-    text-decoration:none;
-    color:#050505;
-    font-size:28px;
-    font-weight:800;
-    background:linear-gradient(
-        90deg,
-        #c69522,
-        #f6d66d,
-        #d1a32d
-    );
-    border:1px solid #f4d66d;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 27px;
+
+    background:
+        rgba(7,18,24,.8);
+
     box-shadow:
-        0 0 25px rgba(225,181,55,.22),
+        0 0 12px rgba(201,155,39,.08);
+}
+
+.feature h2 {
+    font-size: 16px;
+
+    line-height: 1.2;
+
+    color: #f1f1f1;
+
+    margin-bottom: 5px;
+}
+
+.feature p {
+    color: #9fa7aa;
+
+    font-size: 13px;
+
+    line-height: 1.35;
+}
+
+/* =========================
+   COMMUNITY
+========================= */
+
+.community {
+    text-align: center;
+
+    font-size: 14px;
+
+    line-height: 1.4;
+
+    color: #e7e7e7;
+
+    margin: 14px 0;
+}
+
+.community span {
+    color: #f5d36b;
+
+    font-size: 18px;
+
+    margin: 0 5px;
+}
+
+/* =========================
+   TELEGRAM BUTTON
+========================= */
+
+.join-btn {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    width: 100%;
+
+    min-height: 62px;
+
+    border-radius: 35px;
+
+    text-decoration: none;
+
+    color: #050505;
+
+    font-size: 20px;
+
+    font-weight: 800;
+
+    background:
+        linear-gradient(
+            90deg,
+            #c69522,
+            #f6d66d,
+            #d1a32d
+        );
+
+    border: 1px solid #f4d66d;
+
+    box-shadow:
+        0 0 20px rgba(225,181,55,.22),
         inset 0 0 10px rgba(255,255,255,.25);
-    transition:.3s;
+
+    transition: .3s;
 }
 
-.join-btn:hover{
-    transform:scale(1.02);
+.join-btn:hover {
+    transform: scale(1.02);
+
     box-shadow:
-        0 0 35px rgba(225,181,55,.4),
+        0 0 30px rgba(225,181,55,.4),
         inset 0 0 10px rgba(255,255,255,.3);
 }
 
-.telegram-icon{
-    width:52px;
-    height:52px;
-    border-radius:50%;
-    background:#050505;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    color:#f4d66d;
-    font-size:28px;
+.telegram-icon {
+    width: 40px;
+    height: 40px;
+
+    border-radius: 50%;
+
+    background: #050505;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: #f4d66d;
+
+    font-size: 21px;
 }
 
-/* Hindi Quote */
-.quote{
-    text-align:center;
-    color:#e9c653;
-    font-size:17px;
-    line-height:1.7;
-    margin:20px 5px 15px;
+/* =========================
+   HINDI QUOTE
+========================= */
+
+.quote {
+    text-align: center;
+
+    color: #e9c653;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+
+    margin: 15px 2px 12px;
 }
 
-.quote span{
-    font-size:20px;
-    margin:0 10px;
+.quote span {
+    font-size: 16px;
+
+    margin: 0 5px;
 }
 
-/* Trust */
-.trust{
-    border:1px solid #70591e;
-    border-radius:25px;
-    padding:14px 8px;
-    text-align:center;
-    color:#92999c;
-    font-size:13px;
-    letter-spacing:.3px;
+/* =========================
+   TRUST BOX
+========================= */
+
+.trust {
+    border: 1px solid #70591e;
+
+    border-radius: 18px;
+
+    padding: 10px 5px;
+
+    text-align: center;
+
+    color: #92999c;
+
+    font-size: 10px;
+
+    letter-spacing: .2px;
 }
 
-.trust b{
-    color:#c5b45c;
-    font-size:16px;
-    margin-right:6px;
+.trust b {
+    color: #c5b45c;
+
+    font-size: 13px;
+
+    margin-right: 3px;
 }
 
-/* Footer */
-.footer{
-    text-align:center;
-    color:#555e61;
-    font-size:12px;
-    margin-top:8px;
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    text-align: center;
+
+    color: #555e61;
+
+    font-size: 10px;
+
+    margin-top: 7px;
 }
 
-/* Mobile */
-@media(max-width:500px){
+/* =========================
+   360px MOBILE
+========================= */
 
-    .main{
-        max-width:100%;
-        border-radius:0 0 30px 30px;
-        padding:15px 16px 25px;
+@media (max-width: 360px) {
+
+    .main {
+        max-width: 360px;
+
+        padding: 8px;
+
+        border-radius: 20px;
     }
 
-    .inner{
-        padding:12px 27px 25px;
+    .inner {
+        padding: 10px 12px 18px;
     }
 
-    h1{
-        font-size:31px;
+    .logo-box {
+        width: 78px;
+        height: 78px;
     }
 
-    .subtitle{
-        font-size:19px;
+    .logo-box img {
+        width: 74px;
+        height: 74px;
     }
 
-    .feature{
-        gap:20px;
-        padding:20px 0;
+    h1 {
+        font-size: 23px;
     }
 
-    .icon{
-        min-width:70px;
-        width:70px;
-        height:70px;
+    .subtitle {
+        font-size: 14px;
     }
 
-    .feature h2{
-        font-size:21px;
+    .managed {
+        margin-bottom: 12px;
     }
 
-    .feature p{
-        font-size:16px;
+    .feature {
+        gap: 10px;
+
+        padding: 12px 0;
     }
 
-    .join-btn{
-        min-height:82px;
-        font-size:27px;
+    .icon {
+        min-width: 50px;
+
+        width: 50px;
+        height: 50px;
+
+        font-size: 24px;
+    }
+
+    .feature h2 {
+        font-size: 14px;
+    }
+
+    .feature p {
+        font-size: 12px;
+    }
+
+    .community {
+        font-size: 13px;
+    }
+
+    .join-btn {
+        min-height: 58px;
+
+        font-size: 18px;
+    }
+
+    .telegram-icon {
+        width: 37px;
+        height: 37px;
+
+        font-size: 19px;
+    }
+
+    .quote {
+        font-size: 12px;
+    }
+
+    .trust {
+        font-size: 9px;
     }
 }
 
-@media(max-width:380px){
-
-    .inner{
-        padding-left:18px;
-        padding-right:18px;
-    }
-
-    h1{
-        font-size:27px;
-    }
-
-    .subtitle{
-        font-size:17px;
-    }
-
-    .feature h2{
-        font-size:18px;
-    }
-
-    .feature p{
-        font-size:14px;
-    }
-
-    .icon{
-        min-width:62px;
-        width:62px;
-        height:62px;
-        font-size:29px;
-    }
-
-    .join-btn{
-        font-size:22px;
-        gap:10px;
-    }
-
-    .telegram-icon{
-        width:46px;
-        height:46px;
-        font-size:23px;
-    }
-}
 </style>
 </head>
 
@@ -346,7 +486,10 @@ h1{
 
     <!-- LOGO -->
     <div class="logo-box">
-        <img src="https://i.ibb.co/whmTptQZ/vishwa-publication-logo.png" alt="Vishwa Publication">
+        <img
+            src="https://i.ibb.co/whmTptQZ/vishwa-publication-logo.png"
+            alt="Vishwa Publication"
+        >
     </div>
 
     <!-- TITLE -->
@@ -356,66 +499,113 @@ h1{
         Work From Home Opportunities
     </div>
 
-    <!-- MANAGED -->
+    <!-- MANAGED BY -->
     <div class="managed">
+
         Managed By
-        <strong>DECHALWAL DIGITAL WORLD</strong>
+
+        <strong>
+            DECHALWAL DIGITAL WORLD
+        </strong>
+
     </div>
 
     <!-- FEATURE 1 -->
     <div class="feature">
-        <div class="icon">🏠</div>
+
+        <div class="icon">
+            🏠
+        </div>
 
         <div>
-            <h2>WORK FROM HOME OPPORTUNITY</h2>
+
+            <h2>
+                WORK FROM HOME OPPORTUNITY
+            </h2>
+
             <p>
                 Start your journey from the comfort of your home.
             </p>
+
         </div>
+
     </div>
 
     <!-- FEATURE 2 -->
     <div class="feature">
-        <div class="icon">🖋️</div>
+
+        <div class="icon">
+            🖋️
+        </div>
 
         <div>
-            <h2>WRITING &amp; CONTENT PROJECTS</h2>
+
+            <h2>
+                WRITING &amp; CONTENT PROJECTS
+            </h2>
+
             <p>
                 Work on writing, typing, and content creation projects.
             </p>
+
         </div>
+
     </div>
 
     <!-- FEATURE 3 -->
     <div class="feature">
-        <div class="icon">📖</div>
+
+        <div class="icon">
+            📖
+        </div>
 
         <div>
-            <h2>PUBLICATION-BASED PROJECTS</h2>
+
+            <h2>
+                PUBLICATION-BASED PROJECTS
+            </h2>
+
             <p>
                 Be a part of our publication and gain real-world experience.
             </p>
+
         </div>
+
     </div>
 
     <!-- FEATURE 4 -->
     <div class="feature">
-        <div class="icon">💻</div>
+
+        <div class="icon">
+            💻
+        </div>
 
         <div>
-            <h2>FLEXIBLE WORKING PROCESS</h2>
+
+            <h2>
+                FLEXIBLE WORKING PROCESS
+            </h2>
+
             <p>
                 Work at your own time with complete flexibility.
             </p>
+
         </div>
+
     </div>
 
     <!-- COMMUNITY -->
     <div class="community">
+
         <span>🎭</span>
-        Join our work from home community<br>
+
+        Join our work from home community
+        <br>
+
         and build your career with us.
+
         <span>🎭</span>
+
     </div>
 
     <!-- TELEGRAM BUTTON -->
@@ -425,31 +615,52 @@ h1{
         target="_blank"
         rel="noopener noreferrer"
     >
-        <div class="telegram-icon">▶</div>
+
+        <div class="telegram-icon">
+            ▶
+        </div>
+
         JOIN TELEGRAM
+
     </a>
 
     <!-- QUOTE -->
     <div class="quote">
+
         <span>★</span>
-        मेहनत आज आपकी है, सफलता कल आपकी होगी।<br>
+
+        मेहनत आज आपकी है, सफलता कल आपकी होगी।
+
+        <br>
+
         शुरुआत कीजिए, बदलाव खुद महसूस कीजिए!
+
         <span>★</span>
+
     </div>
 
     <!-- TRUST -->
     <div class="trust">
+
         <b>✓</b>
+
         100% Genuine Projects
+
         &nbsp; • &nbsp;
+
         No Fees
+
         &nbsp; • &nbsp;
+
         Safe &amp; Trusted
+
     </div>
 
     <!-- FOOTER -->
     <div class="footer">
+
         © 2026 Vishwa Publication
+
     </div>
 
 </div>
@@ -458,3 +669,4 @@ h1{
 
 </body>
 </html>
+```
